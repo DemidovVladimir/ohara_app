@@ -1,49 +1,82 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+document.addEventListener("deviceready", onDeviceReady, false);
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+var root;
+var testZone = document.getElementById('test-zone');
 
-        console.log('Received Event: ' + id);
-    }
-};
+
+function onDeviceReady(){
+    // Note: The file system has been prefixed as of Google Chrome 12:
+    window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onInitFs, errorHandler);
+}
+
+
+function getFileSuccess(fe){
+    fe.file(gotFile,errorHandler);
+}
+
+function gotFile(file){
+    var reader = new FileReader();
+    reader.onloadend = function(evt){
+        testZone.innerHTML = "<img src="+ evt.target.result+">";
+    };
+    reader.readAsDataURL(file);
+}
+
+function onInitFs(fs) {
+    
+    fs.root.getFile('img/box.jpg',null, getFileSuccess, errorHandler);
+    
+    var fileURL = "cdvfile://localhost/persistent/img/box.jpg";
+    
+    var fileTransfer = new FileTransfer();
+    var uri = encodeURI("http://oharapub.kz/img/box.jpg");
+    
+    fileTransfer.download(
+                          uri,
+                          fileURL,
+                          function(entry) {
+                          testZone.innerHTML += "download complete: " + entry.fullPath;
+                          },
+                          function(error) {
+                          testZone.innerHTML += "download error source " + error.source;
+                          testZone.innerHTML += "download error target " + error.target;
+                          testZone.innerHTML += "upload error code" + error.code;
+                          },
+                          false,
+                          {
+                          headers: {
+                          "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                          }
+                          }
+                          );
+}
+
+
+function errorHandler(e) {
+    var msg = '';
+    
+    switch (e.code) {
+        case FileError.QUOTA_EXCEEDED_ERR:
+            msg = 'QUOTA_EXCEEDED_ERR';
+            break;
+        case FileError.NOT_FOUND_ERR:
+            msg = 'NOT_FOUND_ERR';
+            break;
+        case FileError.SECURITY_ERR:
+            msg = 'SECURITY_ERR';
+            break;
+        case FileError.INVALID_MODIFICATION_ERR:
+            msg = 'INVALID_MODIFICATION_ERR';
+            break;
+        case FileError.INVALID_STATE_ERR:
+            msg = 'INVALID_STATE_ERR';
+            break;
+        default:
+            msg = 'Unknown Error';
+            break;
+    };
+    
+    alert('Error: ' + msg);
+}
+
