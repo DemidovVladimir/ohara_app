@@ -1,65 +1,75 @@
-app.controller('localTry',function($scope){
-    $scope.collect = function(){
-        var collection = $scope.localVal;
-        if(typeof(Storage)!=="undefined")
-        {
-            var local = localStorage.getItem('output');
-            if(local){
-                $scope.out = local;
-            }else{
-                localStorage.setItem("output", $scope.localVal);
-            }
-        }
-        else
-        {
-            $scope.out = 'Local collect is not supported';
-        }
-    }
-               
-               
-               
-               
-               
-               
-               
-               
-   $scope.clear = function($scope){
-       localStorage.removeItem('output');
-   }
+app.controller('total',function($scope,$resource){
+    $('.round').arctext({radius: 200});
 
-               generalFail=function(evt) {
-                    $scope.pathLocal = "FAILURE: " + evt.code;
-               }
-               
-               getFileSystem=function(fileSystem) {
-                    fileSystem.root.getFile("/data.txt", {create: true, exclusive: false}, createSuccess, generalFail);
-               }
-               
-               createSuccess=function(fileEntry) {
-               
-               var fileTransfer = new FileTransfer();
-               var uri = encodeURI("http://www.greenjaydigital.com/data.txt");
-               fileTransfer.download(
-                                     uri,
-                                     fileEntry.fullPath.toURL(),
-                                     function(entry) {
-                                        $scope.pathLocal+= "download complete: " + entry.fullPath
-                                     },
-                                     function(error) {
-                                        $scope.pathLocal+= "download error source " + error.source;
-                                        $scope.pathLocal+= "download error target " + error.target;
-                                        $scope.pathLocal+= "upload error code" + error.code;
-                                     }
-                                     );
-                    $scope.pathLocal = 'File created';
-               },
-               
-               
-               
-               
-               
-               $scope.showPath = function(){
-                    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, getFileSystem, generalFail);
-               }
+    $scope.sync = function(){
+        localStorage.removeItem('info');
+        localStorage.removeItem('cats');
+        var categories = [];
+        var typesObj = [];
+        var photos = [];
+        var todo = $resource('http://oharapub.kz/getMenuTotal');
+        var info = todo.query(function(){
+            var toLocInfo = JSON.stringify(info);
+            localStorage.setItem('info',toLocInfo);
+            for(var i=0; i<info.length;i++){
+
+                    if(photos.indexOf(info[i].dish_photo)==-1){
+                        photos.push(info[i].dish_photo);
+
+                    //FileTransfer
+                        var fileURL = 'cdvfile://localhost/persistent/'+info[i].dish_photo;
+                        var fileTransfer = new FileTransfer();
+                        var uri = encodeURI("http://oharapub.kz/img/"+info[i].dish_photo);
+
+                        fileTransfer.download(
+                            uri,
+                            fileURL,
+                            function(entry) {
+                                console.log("download complete: " + entry.toURL());
+                            },
+                            function(error) {
+                                console.log("download error source " + error.source);
+                                console.log("download error target " + error.target);
+                                console.log("upload error code" + error.code);
+                            },
+                            false,
+                            {
+                                headers: {
+                                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                                }
+                            }
+                        );
+                        //FileTransferEnd
+
+                    }
+
+
+
+                var type = {};
+                type.type = info[i].dish_type;
+                type.category = info[i].dish_category;
+
+                if(categories.indexOf(info[i].dish_category)==-1){
+                    categories.push(info[i].dish_category);
+                    typesObj.push(type);
+                }
+
+
+            }
+            var toLocCats = JSON.stringify(typesObj);
+            localStorage.setItem('cats',toLocCats);
+        });
+
+
+
+
+
+        }
+
+
+    $scope.cats = JSON.parse(localStorage.getItem('cats'));
+    $scope.info = JSON.parse(localStorage.getItem('info'));
+
+
 });
 
