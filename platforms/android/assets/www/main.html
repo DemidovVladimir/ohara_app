@@ -106,19 +106,128 @@
     <div data-role="collapsible-set" data-content-theme="c">
         <div data-role="collapsible">
             <h3><div class="round">Хоспер</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='хоспер'">
+            <div data-ng-repeat="pic in hosper">
+
                     <h2>{{pic.dish_name}}</h2>
                     <div ng-show="pic.dish_photo[0]!='box.jpg'">
                         <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
                     </div>
                     <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
                     <p>{{pic.dish_about}}</p>
-                </div>
+
             </div>
         </div>
 
         <div data-role="collapsible">
+            <h3><div class="round">Рекомендации к пиву</div></h3>
+            <div data-ng-repeat="pic in for_beer">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+
+        <div data-role="collapsible">
+            <h3><div class="round">Салаты</div></h3>
+            <div data-ng-repeat="pic in salads">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Горячие закуски</div></h3>
+            <div data-ng-repeat="pic in hot_snacks">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Супы</div></h3>
+            <div data-ng-repeat="pic in soups">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Паста</div></h3>
+            <div data-ng-repeat="pic in pasta">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Блюда из птицы</div></h3>
+            <div data-ng-repeat="pic in bird">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Гарнир</div></h3>
+            <div data-ng-repeat="pic in stuff">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Соусы</div></h3>
+            <div data-ng-repeat="pic in sous">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3><div class="round">Десерты</div></h3>
+            <div data-ng-repeat="pic in deserts">
+                    <h2>{{pic.dish_name}}</h2>
+                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                    </div>
+                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
+                    <p>{{pic.dish_about}}</p>
+            </div>
+        </div>
+
+       <!-- <div data-role="collapsible">
             <h3><div class="round">Холодные закуски</div></h3>
             <div data-ng-repeat="pic in info">
                 <div ng-show="pic.dish_category=='холодные закуски'">
@@ -130,133 +239,7 @@
                     <p>{{pic.dish_about}}</p>
                 </div>
             </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Салаты</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='салаты'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Горячие закуски</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='горячие закуски'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Супы</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='супы'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Паста</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='паста'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Блюда из птицы</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='блюда из птицы'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Гарнир</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='гарнир'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Рекомендации к пиву</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='рекомендации к пиву'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Соусы</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='соусы'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Десерты</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='десерты'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3>Цена: {{pic.dish_price}} Обьем: {{pic.dish_weight}}</h3>
-                    <p>{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
+        </div>-->
 
     </div>
 
@@ -268,9 +251,93 @@
 
     <div data-role="collapsible-set" data-content-theme="c">
 
+    <div data-role="collapsible">
+        <h3><div class="round">Craft Beer</div></h3>
+        <div data-ng-repeat="pic in beer">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">
+            <h3>Игристые вина / Sparkling wine</h3>
+        </div></h3>
+        <div data-ng-repeat="pic in s_wine">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">
+            <h3>Вина по бокалам / Wine by the glass</h3>
+        </div></h3>
+        <div data-ng-repeat="pic in g_wine">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">
+            <h3>Белые вина / White wine</h3>
+        </div></h3>
+        <div data-ng-repeat="pic in w_wine">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">
+            <h3>Красные вина / Red wine</h3>
+        </div></h3>
+        <div data-ng-repeat="pic in r_wine">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">
+            <h3>Новый свет / New World</h3>
+        </div></h3>
+        <div data-ng-repeat="pic in n_wine">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined' || pic.dish_weight">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+
+
         <div data-role="collapsible">
             <h3><div class="round">Vermouth. Bitter. Digestive.</div></h3>
-            <div data-ng-repeat="pic in info">
+            <div data-ng-repeat="pic in vermouth">
                 <div ng-show="pic.dish_category=='Vermouth. Bitter. Digestive.'">
                     <h2>{{pic.dish_name}}</h2>
                     <div ng-show="pic.dish_photo[0]!='box.jpg'">
@@ -284,449 +351,386 @@
 
         <div data-role="collapsible">
             <h3><div class="round">Brandy. Cognac.</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Brandy. Cognac.'">
+            <div data-ng-repeat="pic in brandy">
                     <h2>{{pic.dish_name}}</h2>
                     <div ng-show="pic.dish_photo[0]!='box.jpg'">
                         <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
                     </div>
                     <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
                     <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
             </div>
         </div>
 
         <div data-role="collapsible">
             <h3><div class="round">Calvados</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Calvados'">
+            <div data-ng-repeat="pic in calvados">
                     <h2>{{pic.dish_name}}</h2>
                     <div ng-show="pic.dish_photo[0]!='box.jpg'">
                         <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
                     </div>
                     <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
                     <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
             </div>
         </div>
 
         <div data-role="collapsible">
             <h3><div class="round">Bas Armagnac</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Bas Armagnac'">
+            <div data-ng-repeat="pic in armagnac">
                     <h2>{{pic.dish_name}}</h2>
                     <div ng-show="pic.dish_photo[0]!='box.jpg'">
                         <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
                     </div>
                     <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
                     <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
             </div>
         </div>
 
         <div data-role="collapsible">
             <h3><div class="round">Irish whiskey</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Irish whiskey'">
+            <div data-ng-repeat="pic in ir_whiskey">
                     <h2>{{pic.dish_name}}</h2>
                     <div ng-show="pic.dish_photo[0]!='box.jpg'">
                         <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
                     </div>
                     <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
                     <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
             </div>
         </div>
 
-        <div data-role="collapsible">
-            <h3><div class="round">Single malt Scottish whisky</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Single malt Scottish whisky'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
+    <div data-role="collapsible">
+         <h3><div class="round">Single malt Scottish whisky</div></h3>
+         <div data-ng-repeat="pic in ss_whiskey">
+                 <h2>{{pic.dish_name}}</h2>
+                 <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                     <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                 </div>
+                 <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                 <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+         </div>
+     </div>
 
-        <div data-role="collapsible">
-            <h3><div class="round">Blended Scottish whisky</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Blended Scottish whisky'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">American Whiskey</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='American Whiskey'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Japanese Whiskey</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Japanese Whisky'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Japanese Malt</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Japanese Malt'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Polugar</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Polugar'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Vodka</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Vodka'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Tequila</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Tequila'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Gin</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Gin'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Rum</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Rum'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Liqueurs</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Liqueurs'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Mix Drink</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Mix Drink'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Shot drinks</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Shot drinks'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Classic cocktails</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Classic cocktails'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">ПОПУЛЯРНЫЕ</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='ПОПУЛЯРНЫЕ'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Wet pussy drinks</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Wet pussy drinks'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Non-Alcohol Cocktails</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Non-Alcohol Cocktails'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Drinks</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Drinks'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Fresh juices</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Fresh juices'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Energy drink</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Energy drink'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Coffee</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Coffee'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Tea</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Tea'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Special Offer</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Special Offer'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Cigarettes</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Cigarettes'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-        <div data-role="collapsible">
-            <h3><div class="round">Cigars</div></h3>
-            <div data-ng-repeat="pic in info">
-                <div ng-show="pic.dish_category=='Cigars'">
-                    <h2>{{pic.dish_name}}</h2>
-                    <div ng-show="pic.dish_photo[0]!='box.jpg'">
-                        <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
-                    </div>
-                    <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
-                    <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-<div data-role="collapsible">
-    <h3><div class="round">Ланч</div></h3>
-        <div data-ng-repeat="pic in info">
-            <div ng-show="pic.dish_category=='ланч'">
+    <div data-role="collapsible">
+        <h3><div class="round">Blended Scottish whisky</div></h3>
+        <div data-ng-repeat="pic in bs_whiskey">
                 <h2>{{pic.dish_name}}</h2>
                 <div ng-show="pic.dish_photo[0]!='box.jpg'">
                     <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
                 </div>
                 <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
                 <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-            </div>
         </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">American Whiskey</div></h3>
+        <div data-ng-repeat="pic in am_whiskey">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Japanese Whiskey</div></h3>
+        <div data-ng-repeat="pic in jap_whiskey">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Japanese Malt</div></h3>
+        <div data-ng-repeat="pic in jap_malt">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Polugar</div></h3>
+        <div data-ng-repeat="pic in polugar">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+         <h3><div class="round">Vodka</div></h3>
+         <div data-ng-repeat="pic in vodka">
+                 <h2>{{pic.dish_name}}</h2>
+                 <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                     <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                 </div>
+                 <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                 <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+         </div>
+     </div>
+
+     <div data-role="collapsible">
+         <h3><div class="round">Tequila</div></h3>
+         <div data-ng-repeat="pic in tequila">
+                 <h2>{{pic.dish_name}}</h2>
+                 <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                     <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                 </div>
+                 <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                 <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+         </div>
+     </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Gin</div></h3>
+        <div data-ng-repeat="pic in gin">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Rum</div></h3>
+        <div data-ng-repeat="pic in rum">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Liqueurs</div></h3>
+        <div data-ng-repeat="pic in liquer">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Mix Drink</div></h3>
+        <div data-ng-repeat="pic in mix_drink">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Shot drinks</div></h3>
+        <div data-ng-repeat="pic in shot_drink">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Classic cocktails</div></h3>
+        <div data-ng-repeat="pic in cl_coctail">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Popular</div></h3>
+        <div data-ng-repeat="pic in popular">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Wet pussy drinks</div></h3>
+        <div data-ng-repeat="pic in wet_pussy">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Non-Alcohol Cocktails</div></h3>
+        <div data-ng-repeat="pic in na_coctail">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Soft Drinks</div></h3>
+        <div data-ng-repeat="pic in drinks">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Fresh juices</div></h3>
+        <div data-ng-repeat="pic in fresh">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Energy drink</div></h3>
+        <div data-ng-repeat="pic in energy">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Coffee</div></h3>
+        <div data-ng-repeat="pic in coffee">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Tea</div></h3>
+        <div data-ng-repeat="pic in tea">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Special Offer</div></h3>
+        <div data-ng-repeat="pic in sp_offer">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Cigarettes</div></h3>
+        <div data-ng-repeat="pic in cigarettes">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
+    <div data-role="collapsible">
+        <h3><div class="round">Cigars</div></h3>
+        <div data-ng-repeat="pic in cigars">
+                <h2>{{pic.dish_name}}</h2>
+                <div ng-show="pic.dish_photo[0]!='box.jpg'">
+                    <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+                </div>
+                <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined' || pic.dish_weight!=''">Обьем: {{pic.dish_weight}}</span></h3>
+                <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+        </div>
+    </div>
+
 </div>
 
+</div>
+
+
+
+
+
+
+
+
 <div data-role="collapsible">
-    <h3><div class="round">Бранч</div></h3>
-    <div data-ng-repeat="pic in info">
-        <div ng-show="pic.dish_category=='бранч'">
+<h3><div class="round">Ланч</div></h3>
+    <div data-ng-repeat="pic in launch">
             <h2>{{pic.dish_name}}</h2>
             <div ng-show="pic.dish_photo[0]!='box.jpg'">
                 <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
             </div>
             <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
             <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
-        </div>
     </div>
 </div>
 
+<div data-role="collapsible">
+<h3><div class="round">Бранч</div></h3>
+<div data-ng-repeat="pic in branch">
+        <h2>{{pic.dish_name}}</h2>
+        <div ng-show="pic.dish_photo[0]!='box.jpg'">
+            <img ng-src='cdvfile://localhost/persistent/{{pic.dish_photo[0]}}'>
+        </div>
+        <h3><span>Цена: {{pic.dish_price}}</span> <span ng-show="pic.dish_weight!='undefined'">Обьем: {{pic.dish_weight}}</span></h3>
+        <p ng-show="pic.dish_about!='undefined'">{{pic.dish_about}}</p>
+</div>
+</div>
 
 
 </div>
