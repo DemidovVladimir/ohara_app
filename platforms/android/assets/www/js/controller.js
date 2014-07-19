@@ -2,7 +2,7 @@ app.controller('total',function($scope,$resource){
     $('.round').arctext({radius: 200});
 
     $scope.sync = function(){
-        localStorage.removeItem('info');
+       /* localStorage.removeItem('info');
         localStorage.removeItem('cats');
         localStorage.removeItem('hosper');
         localStorage.removeItem('for_beer');
@@ -51,7 +51,7 @@ app.controller('total',function($scope,$resource){
         localStorage.removeItem('cigarettes');
         localStorage.removeItem('cigars');
         localStorage.removeItem('launch');
-        localStorage.removeItem('branch');
+        localStorage.removeItem('branch');*/
 
 
 
